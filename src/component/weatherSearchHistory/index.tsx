@@ -1,16 +1,17 @@
+import { useWeatherStore } from "../../store/weatherStore";
 import { WeatherDetails } from "../../types";
 import "./index.scss";
 
 interface WeatherSearchHistoryProps {
   onClickSearch: (string: string) => void;
   onClickDelete: (string: string) => void;
-  weatherArr: WeatherDetails[];
 }
 
 const WeatherSearchHistory = (
   props: WeatherSearchHistoryProps
 ): JSX.Element => {
-  const { onClickSearch, onClickDelete, weatherArr } = props;
+  const { onClickSearch, onClickDelete } = props;
+  const { weatherArr } = useWeatherStore();
 
   return (
     <div className='weather-list-wrapper'>
