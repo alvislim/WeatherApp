@@ -1,5 +1,4 @@
 import { useWeatherStore } from "../../store/weatherStore";
-import { WeatherDetails } from "../../types";
 import "./index.scss";
 
 interface WeatherSearchHistoryProps {
