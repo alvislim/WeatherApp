@@ -60,7 +60,7 @@ const DashBoard = (): JSX.Element => {
 
   return (
     <div className={clsx(!darkMode && "light-mode")}>
-      <div className="wrapper">
+      <div className='wrapper'>
         <SearchBar
           onInputChange={onInputChange}
           handleSearchOnEnter={handleSearchOnEnter}
@@ -69,17 +69,16 @@ const DashBoard = (): JSX.Element => {
           onClickDarkToggle={onClickDarkToggle}
           darkMode={darkMode}
         />
-        {errormsg && <p className="error-msg">{errormsg}</p>}
-        <div className="wrapper">
-          <span className="ico-sun" />
-          <div className="card-wrapper">
+        {errormsg && <p className='error-msg'>{errormsg}</p>}
+        <div className='wrapper'>
+          <span className='ico-sun' />
+          <div className='card-wrapper'>
             {currentWeatherInfo && (
               <CurrentWeatherInfo currentWeatherInfo={currentWeatherInfo} />
             )}
             <WeatherSearchHistory
               onClickDelete={onClickDelete}
               onClickSearch={onClickSearch}
-              weatherArr={weatherArr}
             />
           </div>
         </div>
