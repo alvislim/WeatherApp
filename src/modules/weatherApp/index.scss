@@ -3,6 +3,7 @@
 .light-mode {
   .wrapper {
     background-image: url("/public/assets/image/bg-light.png");
+    transition: background-image 200ms ease-in;
 
     .current-weather-info {
       .header {
@@ -113,6 +114,7 @@
   flex-flow: column;
   min-height: 100vh;
   background-image: url("/public/assets/image/bg-dark.png");
+  transition: background-image 200ms ease-in;
 
   @include bp("desktop") {
     height: 100%;
